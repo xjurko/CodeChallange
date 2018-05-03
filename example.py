@@ -1,5 +1,5 @@
-from markup_parser import Consumer
-from markup_extractor import Producer
+from markup_parser import MarkupParser
+from markup_extractor import MarkupExtractor
 
 
 if __name__ == '__main__':
@@ -10,8 +10,8 @@ if __name__ == '__main__':
 		'https://www.codetriage.com/?language=Python&page=4',
     ]
 
-	producer = Producer(urls)
-	consumer = Consumer(producer, 'output.json')
+	producer = MarkupExtractor(urls)
+	consumer = MarkupParser(producer, 'output.json')
 
 	producer.start()
 	consumer.start()

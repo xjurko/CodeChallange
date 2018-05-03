@@ -12,9 +12,9 @@ except ImportError:
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-class Consumer(Thread):
+class MarkupParser(Thread):
 	def __init__(self, producer_thread, output_file):
-		super(Consumer, self).__init__()
+		super(MarkupParser, self).__init__()
 		self.read_buffer = producer_thread.write_buffer
 		self.producer = producer_thread
 		self.output = output_file

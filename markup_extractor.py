@@ -12,9 +12,9 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-class Producer(Thread):
+class MarkupExtractor(Thread):
 	def __init__(self, urls, workers=1):
-		super(Producer, self).__init__()
+		super(MarkupExtractor, self).__init__()
 		self.write_buffer = Queue()
 		self.urls = urls
 		self.workers = workers
