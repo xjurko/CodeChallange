@@ -20,10 +20,10 @@ class Consumer(Thread):
 		self.output = output_file
 
 	def run(self):
-		output_data = self.process_markdown_buffer()
+		output_data = self.process_markup_buffer()
 		self._output_write(output_data)
 
-	def process_markdown_buffer(self):
+	def process_markup_buffer(self):
 		output = []
 		while not self._producer_write_complete():
 			data = self._try_get_from_buffer()

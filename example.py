@@ -1,5 +1,5 @@
-from consumer import Consumer
-from producer import Producer
+from markup_parser import Consumer
+from markup_extractor import Producer
 
 
 if __name__ == '__main__':
