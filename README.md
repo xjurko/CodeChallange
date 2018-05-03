@@ -31,7 +31,7 @@ producer.join()
 consumer.join()
 ```
 
-## Consumer Output Format
+## MarkupParser Output Format
 JSON with following structure:
 ```json
 [
